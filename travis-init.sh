@@ -9,7 +9,7 @@ if [[ "$TRAVIS_PHP_VERSION" != "hhvm" &&
     sudo apt-get install -y libevent-dev
 
     # install 'event' PHP extension
-    echo "yes" | pecl install event
+    #echo "yes" | pecl install event
 
     # install 'libevent' PHP extension
     curl http://pecl.php.net/get/libevent-0.1.0.tgz | tar -xz
