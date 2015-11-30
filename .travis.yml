@@ -15,10 +15,7 @@ matrix:
     #- php: hhvm-nightly
   fast_finish: true
 
-install:
-  - sudo apt-get install libevent-dev
-  - pecl install channel://pecl.php.net/libevent-0.1.0
-  - pecl install event
+install: sudo ./travis-init.sh
 
 script:
   - phpunit --coverage-text
