@@ -15,7 +15,8 @@ matrix:
     - php: hhvm-nightly
   fast_finish: true
 
-install: sudo ./travis-init.sh
+install:
+  - if [[ "$TRAVIS_PHP_VERSION" != "hhvm" && "$TRAVIS_PHP_VERSION" != "hhvm-nightly" ]]; then pecl install libevent; pecl install event; fi;
 
 script:
   - phpunit --coverage-text
