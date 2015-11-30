@@ -15,7 +15,10 @@ matrix:
     #- php: hhvm-nightly
   fast_finish: true
 
-install: composer install
+install:
+  - sudo apt-get install -y libevent-dev
+  - pecl install event
+  - composer install --dev --prefer-source
   
 script:
   - phpunit --coverage-text
