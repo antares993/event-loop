@@ -17,8 +17,8 @@ matrix:
 
 install:
   - sudo apt-get install libevent-dev
-  - pecl install libevent;
-  - pecl install event;
+  - pecl install channel://pecl.php.net/libevent-0.1.0
+  - pecl install event
 
 script:
   - phpunit --coverage-text
