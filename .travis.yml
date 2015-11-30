@@ -23,15 +23,6 @@ install:
   
   - echo "yes" | pecl install event
   
-  - curl http://pecl.php.net/get/libevent-0.1.0.tgz | tar -xz
-  - pushd libevent-0.1.0
-  - phpize
-  - ./configure
-  - make
-  - make install
-  - popd
-  - echo "extension=libevent.so" >> "$(php -r 'echo php_ini_loaded_file();')"
-
   # install 'libev' PHP extension
   - git clone --recursive https://github.com/m4rw3r/php-libev
   - pushd php-libev
