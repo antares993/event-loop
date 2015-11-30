@@ -17,7 +17,7 @@ matrix:
 
 install:
   - sudo apt-get install -y libevent-dev
-  - pecl install event
+  - echo "yes" | pecl install event
   - composer install --dev --prefer-source
   
 script:
